@@ -6,12 +6,14 @@ module.exports = {
     './src/features/**/*.{js,ts,jsx,tsx,mdx}',
     './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
     './src/assets/**/*.{js,ts,jsx,tsx,mdx,png}',
+    './src/common/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: "#4377BD",
+        primary: "#337EEA",
+        secondary: "#0F1D34",
         darkBg:"#282828",
         darkBgBody:"#18181A",
         fontColor: "#222222",
