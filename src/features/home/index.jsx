@@ -9,6 +9,7 @@ const HomePage = () => {
                 <h1 className="text-fontColor dark:white">hello gays</h1>
             </div>
             <div className="col-span-12 border-4 border-green-900 border-solid md:col-span-3">3</div>
+            <div className="col-span-12 border-4 border-green-900 border-solid md:col-span-3">3</div>
         </div>
         </div>
     );
