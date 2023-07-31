@@ -1,20 +1,32 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const Dropdown = (props) => {
-    const { dropdownText, leftIcon, rightIcon, categories } = props;
+    const {
+        dropdownText,
+        dropdownTextColor,
+        leftIcon,
+        rightIcon,
+        items,
+        dropdownIcon,
+    } = props;
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
+    console.log(dropdownIcon);
 
     useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-      }, [isOpen]);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () =>
+            document.removeEventListener("mousedown", handleClickOutside);
+    }, [isOpen]);
 
     const handleClickOutside = (event) => {
-        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-          setIsOpen(false);
+        if (
+            dropdownRef.current &&
+            !dropdownRef.current.contains(event.target)
+        ) {
+            setIsOpen(false);
         }
-      };
+    };
 
     const toggleDropdown = () => {
         setIsOpen((prev) => !prev);
@@ -27,7 +39,11 @@ const Dropdown = (props) => {
                 className="inline-flex justify-center items-center gap-1 px-4 py-2 text-sm font-medium "
             >
                 {leftIcon ? leftIcon : ""}
-                {dropdownText}
+                {dropdownTextColor ? (
+                    <p className="text-[16px] text-white">{dropdownText}</p>
+                ) : (
+                    <p className="text-[16px] text-white dark:text-secondary">{dropdownText}</p>
+                )}
                 {rightIcon ? rightIcon : ""}
             </div>
             {isOpen && (
@@ -38,16 +54,26 @@ const Dropdown = (props) => {
                         aria-orientation="vertical"
                         aria-labelledby="options-menu"
                     >
-                        {categories.map(category => (
-
-                        <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                            role="menuitem"
-                            key={category.id}
-                        >
-                            {category.name}
-                        </a>
+                        {items.map((item) => (
+                            <a
+                                href="#"
+                                className="block px-4 py-2 text-sm text-gray-700 border-b-[1px] hover:bg-gray-100 hover:text-gray-900 last:border-b-0"
+                                role="menuitem"
+                                key={item.id}
+                            >
+                                <div className="flex">
+                                    {dropdownIcon ? (
+                                        <img
+                                            src={item.icon}
+                                            className="w-7 mr-4"
+                                            alt="Icon"
+                                        />
+                                    ) : (
+                                        ""
+                                    )}
+                                    <p className="">{item.name}</p>
+                                </div>
+                            </a>
                         ))}
                     </div>
                 </div>
