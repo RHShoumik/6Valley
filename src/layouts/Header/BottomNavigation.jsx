@@ -3,8 +3,9 @@ import React from "react";
 import useDarkMode from "@/hooks/useDarkMode";
 
 const BottomNavigation = () => {
-  const [setTheme, colorTheme] = useDarkMode();
+  const [setTheme, colorTheme ] = useDarkMode();
 
+  // console.log(colorTheme)
     const handleDarkMode = () => {
         setTheme(colorTheme);
     };

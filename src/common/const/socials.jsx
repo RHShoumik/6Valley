@@ -38,7 +38,7 @@ export const socials = [
         icon: <Instagram />
     },
     {
-        id:1,
+        id:6,
         name:"Facebook",
         link: "#",
         icon: <Facebook />
