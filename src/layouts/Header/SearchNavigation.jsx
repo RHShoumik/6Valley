@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import useDarkMode from "@/hooks/useDarkMode";
 
@@ -15,9 +16,25 @@ import DownarrowIcon from "@/assets/svgIcons/DownarrowIcon";
 
 const SearchNavigation = () => {
     const [setTheme, colorTheme] = useDarkMode();
+    const [categories, setCategories] = useState([]);
 
     const handleDarkMode = () => {
         setTheme(colorTheme);
+    };
+
+    useEffect(() => {
+        fetchCategories();
+    }, []);
+
+    const fetchCategories = async () => {
+        try {
+            const { data } = await axios.get(
+                "https://6valley.sixamtech.com/react/api/v4/categories"
+            );
+            setCategories(data);
+        } catch (error) {
+            console.log("Error", error);
+        }
     };
 
     return (
@@ -37,6 +54,7 @@ const SearchNavigation = () => {
                                 dropdownText="All Categories"
                                 leftIcon={<MenuIcon />}
                                 rightIcon={<DownarrowIcon />}
+                                categories={categories}
                             />
                             <input
                                 className="focus:ring-transparent"

@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Dropdown = (props) => {
-    const { dropdownText, leftIcon, rightIcon } = props;
+    const { dropdownText, leftIcon, rightIcon, categories } = props;
     const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+      }, [isOpen]);
+
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setIsOpen(false);
+        }
+      };
 
     const toggleDropdown = () => {
         setIsOpen((prev) => !prev);
     };
 
     return (
-        <div className="relative inline-block text-left">
+        <div ref={dropdownRef} className="relative inline-block text-left">
             <div
                 onClick={toggleDropdown}
                 className="inline-flex justify-center items-center gap-1 px-4 py-2 text-sm font-medium "
@@ -26,27 +38,17 @@ const Dropdown = (props) => {
                         aria-orientation="vertical"
                         aria-labelledby="options-menu"
                     >
+                        {categories.map(category => (
+
                         <a
                             href="#"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                             role="menuitem"
+                            key={category.id}
                         >
-                            Option 1
+                            {category.name}
                         </a>
-                        <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                            role="menuitem"
-                        >
-                            Option 2
-                        </a>
-                        <a
-                            href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                            role="menuitem"
-                        >
-                            Option 3
-                        </a>
+                        ))}
                     </div>
                 </div>
             )}

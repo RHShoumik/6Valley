@@ -4,7 +4,7 @@ import { socials } from "@/common/const";
 
 const SocialNavigation = () => {
     return (
-        <div className="bg-darkBg p-2 dark:bg-secondary">
+        <div className="bg-darkBgBody p-2 dark:bg-secondary">
             <div className="container flex justify-between items-center">
                 <div className="flex">
                     <button className="bg-primary text-white rounded-3xl px-3 py-1">Become a Seller</button>
