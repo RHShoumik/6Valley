@@ -41,15 +41,15 @@ const HomePage = () => {
                 <div className="col-span-3 hidden md:block">
                     <LeftSidebar items={categories} />
                 </div>
-                <div className="col-span-6 mt-3">
-                    <div className="flex flex-col gap-3">
+                <div className="col-span-6 md:mt-3">
+                    <div className="md:flex flex-col gap-3">
                             <BannerCarousel />
-                        <div className="md:flex gap-3 mt-1">
+                        <div className="md:flex gap-3 md:mt-1">
                             {footerBanners.slice(0, 2).map((banner) => (
                                 <img
                                     src={storgae + banner.photo}
                                     alt={banner.banner_type}
-                                    className="rounded-md w-full h-full object-cover"
+                                    className="mt-3 rounded-md w-full h-full object-cover md:mt-0"
                                 />
                             ))}
                         </div>

@@ -7,7 +7,7 @@ import React from "react";
 
 const BottomNavigation = () => {
     return (
-        <div className=" border-l-neutral-500 border-t-[1px] shadow-sm bg-darkBg dark:bg-white">
+        <div className="hidden border-l-neutral-500 border-t-[1px] shadow-sm bg-darkBg dark:bg-white md:block">
             <div className="container grid grid-cols-12">
                 <div className="flex justify-between col-span-3 bg-primary p-4 mx-3 items-center">
                     <div className="flex items-center">
