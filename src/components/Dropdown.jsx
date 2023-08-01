@@ -36,13 +36,13 @@ const Dropdown = (props) => {
         <div ref={dropdownRef} className="inline-block text-left">
             <div
                 onClick={toggleDropdown}
-                className="inline-flex justify-center items-center gap-1 px-4 py-2 text-sm font-medium "
+                className="inline-flex justify-center items-center gap-1 px-1 py-2 text-sm font-medium md:px-4"
             >
                 {leftIcon ? leftIcon : ""}
                 {dropdownTextColor ? (
-                    <p className="text-[16px] text-white">{dropdownText}</p>
+                    <p className="text-xs text-white md:text-base">{dropdownText}</p>
                 ) : (
-                    <p className="text-[16px] text-white dark:text-secondary">
+                    <p className="text-xs text-white dark:text-secondary md:text-base">
                         {dropdownText}
                     </p>
                 )}

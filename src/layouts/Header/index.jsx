@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <div>
         <TopNavigation />
-        {/* <SocialNavigation />
-        <SearchNavigation />
+        <SocialNavigation />
+        {/* <SearchNavigation />
         <BottomNavigation /> */}
     </div>
   )
