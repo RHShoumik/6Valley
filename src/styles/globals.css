@@ -4,13 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   font-family: 'Mulish', sans-serif;
 }
 
 .swiper {
   width: 100%;
   height: 100%;
+}
+
+.swiper-container {
+  overflow: hidden;
 }
 
 .swiper-slide {

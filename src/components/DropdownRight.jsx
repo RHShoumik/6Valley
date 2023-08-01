@@ -63,7 +63,7 @@ const DropdownRight = (props) => {
                 {rightIcon ? rightIcon : ""}
             </div>
             {isOpen && (
-                <div className="origin-top-right absolute w-48 -mt-[45px] -right-[204px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="origin-top-right absolute z-10 w-48 -mt-[45px] -right-[204px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                     <div
                         className="py-1"
                         role="menu"

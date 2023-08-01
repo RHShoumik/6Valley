@@ -9,7 +9,7 @@ const BottomNavigation = () => {
     return (
         <div className=" border-l-neutral-500 border-t-[1px] shadow-sm bg-darkBg dark:bg-white">
             <div className="container grid grid-cols-12">
-                <div className="flex justify-between col-span-3 bg-primary p-3 items-center">
+                <div className="flex justify-between col-span-3 bg-primary p-4 mx-3 items-center">
                     <div className="flex items-center">
                         <MenuIcon className="text-white h-6 w-6" />
                         <p className="text-white pl-2">Browse Category</p>
@@ -26,6 +26,7 @@ const BottomNavigation = () => {
                             rightIcon={<DropdownArrowLightIcon className="text-white dark:text-secondary"/>}
                             items={languages}
                             dropdownIcon={true}
+                            multiColumn={true}
                         />
                     </div>
                     <div className="px-6">
