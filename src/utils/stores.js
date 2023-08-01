@@ -1,4 +1,4 @@
-export const languages = [
+export const stores = [
     {
         id:1,
         name:"English",

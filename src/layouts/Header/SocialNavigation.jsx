@@ -8,13 +8,13 @@ import { currency } from "@/utils/currency";
 
 const SocialNavigation = () => {
     return (
-        <div className="bg-darkBgBody p-2 dark:bg-secondary">
+        <div className="bg-darkBgBody p-0 dark:bg-secondary md:p-2">
             <div className="container flex justify-between items-center">
                 <div className="flex">
-                    <button className="bg-primary text-white rounded-3xl px-3 py-1">
+                    <button className="bg-primary text-white text-xs rounded-3xl px-3 py-1 md:text-base">
                         Become a Seller
                     </button>
-                    <p className="text-white px-3 py-1">
+                    <p className="text-white px-3 py-1 hidden md:block">
                         Free Express Shipping
                     </p>
                 </div>
@@ -27,21 +27,27 @@ const SocialNavigation = () => {
                     <Dropdown
                         dropdownText="English"
                         dropdownTextColor="#fff"
-                        rightIcon={<DropdownArrowLightIcon className="text-white"/>}
+                        rightIcon={
+                            <DropdownArrowLightIcon className="text-white" />
+                        }
                         items={languages}
                         dropdownIcon={true}
                     />
                     <Dropdown
                         dropdownText="USD"
                         dropdownTextColor="#fff"
-                        rightIcon={<DropdownArrowLightIcon className="text-white"/>}
+                        rightIcon={
+                            <DropdownArrowLightIcon className="text-white" />
+                        }
                         items={currency}
                     />
-                    {socials?.map((social) => (
-                        <button className="px-2" key={social.id}>
-                            {social.icon}
-                        </button>
-                    ))}
+                    <div className="hidden md:block">
+                        {socials?.map((social) => (
+                            <button className="px-2" key={social.id}>
+                                {social.icon}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

@@ -31,7 +31,6 @@ const BannerCarousel = () => {
         }
     };
     return (
-        <div>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -43,13 +42,12 @@ const BannerCarousel = () => {
                     clickable: true,
                 }}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
+                className="mySwiper bg-darkBg dark:bg-white rounded-md"
             >
                 {heroBanners.map((banner) => (
-                    <SwiperSlide><img src={storgae+banner.photo} alt={banner.banner_type}/></SwiperSlide>
+                    <SwiperSlide key={banner.id}><img src={storgae+banner.photo} alt={banner.banner_type}/></SwiperSlide>
                 ))}
             </Swiper>
-        </div>
     );
 };
 

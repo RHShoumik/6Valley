@@ -13,6 +13,7 @@ import SearchIcon from "@/assets/svgIcons/SearchIcon";
 import Dropdown from "@/components/Dropdown";
 import MenuIcon from "@/assets/svgIcons/MenuIcon";
 import DownarrowIcon from "@/assets/svgIcons/DownarrowIcon";
+import MobileSidebar from "./MobileSidebar";
 
 const SearchNavigation = () => {
     const [setTheme, colorTheme] = useDarkMode();
@@ -38,15 +39,19 @@ const SearchNavigation = () => {
 
     return (
         <div className="py-3 bg-darkBg dark:bg-white">
-            <div className="container grid grid-cols-12 justify-between items-center">
-                <div className="col-span-3">
+            <div className="container md:grid grid-cols-12 justify-between items-center">
+                <div className="flex items-center justify-between col-span-3">
                     <img
                         src="https://i.ibb.co/TL7MLnh/logo.png"
                         className="h-11"
                         alt="Site-Logo"
                     />
+                    <div className="block md:hidden">
+                        <MobileSidebar categories={categories} icon={<MenuIcon className="text-white h-6 w-6 dark:text-secondary"/>} />
+                    </div>
                 </div>
-                <div className="col-span-5">
+
+                <div className="hidden md:col-span-5 md:block">
                     <div className="flex justify-between border-[1px] rounded-3xl p-[2px]">
                         <div className="flex">
                             <Dropdown
@@ -66,11 +71,11 @@ const SearchNavigation = () => {
                             />
                         </div>
                         <button className="bg-primary py-3 px-5 rounded-r-3xl">
-                            <SearchIcon height={18} width={18} />
+                            <SearchIcon className="text-white" />
                         </button>
                     </div>
                 </div>
-                <div className="col-span-4">
+                <div className="hidden md:col-span-4 md:block">
                     <div className="flex justify-end">
                         <div onClick={handleDarkMode} className=" px-3">
                             {colorTheme === "dark" ? (

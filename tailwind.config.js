@@ -19,7 +19,9 @@ module.exports = {
         darkBgBody:"#18181A",
         fontColor: "#222222",
         heading: "#1455AC",
-        white:"#fff"
+        white:"#fff",
+        lightGray: "#F8F8FA",
+        primaryLight: "fafafa"
       },
       fontFamily: {
         Mulish: ["Mulish", "sans-serif"],
