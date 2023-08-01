@@ -32,7 +32,6 @@ const DropdownRight = (props) => {
     };
 
     const callDropdown = (item)=>{
-        console.log(item)
         return (
             <DropdownRight
                 items={item.childes}

@@ -5,7 +5,6 @@ const useDarkMode = () => {
   const colorTheme = theme === "dark" ? "light" : "dark";
 
   useEffect(() => {
-    // console.log(localStorage.getItem('theme'));
     const root = window.document.documentElement;
     localStorage.setItem("theme", theme);
     root.classList.remove(colorTheme);

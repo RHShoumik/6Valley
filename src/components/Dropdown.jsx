@@ -11,7 +11,6 @@ const Dropdown = (props) => {
     } = props;
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
-    console.log(dropdownIcon);
 
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);

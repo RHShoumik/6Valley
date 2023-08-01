@@ -1,9 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+const storgae = "https://6valley-aster.6amtech.com/storage/app/public/banner/";
 
 const BannerCarousel = () => {
-  return (
-    <div>BannerCarousel</div>
-  )
-}
+    const [heroBanners, setHeroBanners] = useState([]);
 
-export default BannerCarousel
+    useEffect(() => {
+        fetchHerobanners();
+    }, []);
+
+    const fetchHerobanners = async () => {
+        try {
+            const { data } = await axios.get(
+                "https://6valley.sixamtech.com/react/api/v4/banners?banner_type=main_banner"
+            );
+            setHeroBanners(data);
+        } catch (error) {
+            console.log("Error", error);
+        }
+    };
+    return (
+        <div>
+            <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+            >
+                {heroBanners.map((banner) => (
+                    <SwiperSlide><img src={storgae+banner.photo} alt={banner.banner_type}/></SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    );
+};
+
+export default BannerCarousel;
