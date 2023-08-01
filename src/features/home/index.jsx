@@ -22,7 +22,7 @@ const HomePage = () => {
     };
     return (
         <div className="container">
-            <div className="grid grid-cols-12 gap-2">
+            <div className="grid grid-cols-12 gap-2 bg-darkBg dark:bg-white">
                 <div className="col-span-3 hidden md:block">
                     <LeftSidebar items={categories}/>
                 </div>

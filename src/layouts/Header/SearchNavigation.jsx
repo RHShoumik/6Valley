@@ -51,8 +51,12 @@ const SearchNavigation = () => {
                         <div className="flex">
                             <Dropdown
                                 dropdownText="All Categories"
-                                leftIcon={<MenuIcon className="text-white h-6 w-6 dark:text-secondary"/>}
-                                rightIcon={<DownarrowIcon className="text-white h-6 w-6 dark:text-secondary"/>}
+                                leftIcon={
+                                    <MenuIcon className="text-white h-6 w-6 dark:text-secondary" />
+                                }
+                                rightIcon={
+                                    <DownarrowIcon className="text-white h-6 w-6 dark:text-secondary" />
+                                }
                                 items={categories}
                             />
                             <input
@@ -70,28 +74,28 @@ const SearchNavigation = () => {
                     <div className="flex justify-end">
                         <div onClick={handleDarkMode} className=" px-3">
                             {colorTheme === "dark" ? (
-                                <LightModeIcon className="text-white h-6 w-6 dark:text-secondary"/>
+                                <LightModeIcon className="text-white h-6 w-6 dark:text-secondary" />
                             ) : (
-                                <DarkModeIcon className="text-white h-6 w-6 dark:text-secondary"/>
+                                <DarkModeIcon className="text-white h-6 w-6 dark:text-secondary" />
                             )}
                         </div>
                         <div className="px-3 border-r-2">
                             <UserPlaceholderIcon />
                         </div>
                         <div className="px-3 border-r-2 flex">
-                            <ShuffleIcon className="text-white h-6 w-6 dark:text-secondary"/>
+                            <ShuffleIcon className="text-white h-6 w-6 dark:text-secondary" />
                             <div className="flex items-center h-4 w-4 bg-primary p-1 text-white rounded-full text-xs -mt-1 -ml-2 ">
                                 {1}
                             </div>
                         </div>
                         <div className="px-3 border-r-2 flex">
-                            <WishListIcon className="text-white h-6 w-6 dark:text-secondary"/>
+                            <WishListIcon className="text-white h-6 w-6 dark:text-secondary" />
                             <div className="flex items-center h-4 w-4 bg-primary p-1 text-white rounded-full text-xs -mt-1 -ml-2 ">
                                 {0}
                             </div>
                         </div>
                         <div className="px-3 flex">
-                            <CartIcon className="text-white h-6 w-6 dark:text-secondary"/>
+                            <CartIcon className="text-white h-6 w-6 dark:text-secondary" />
                             <div className="flex items-center h-4 w-4 bg-primary p-1 text-white rounded-full text-xs -mt-1 -ml-2 ">
                                 {7}
                             </div>
