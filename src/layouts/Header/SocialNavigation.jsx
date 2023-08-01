@@ -8,7 +8,7 @@ import { currency } from "@/utils/currency";
 
 const SocialNavigation = () => {
     return (
-        <div className="bg-darkBgBody p-0 dark:bg-secondary md:p2">
+        <div className="bg-darkBgBody p-0 dark:bg-secondary md:p-2">
             <div className="container flex justify-between items-center">
                 <div className="flex">
                     <button className="bg-primary text-white text-xs rounded-3xl px-3 py-1 md:text-base">

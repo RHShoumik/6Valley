@@ -1,7 +1,7 @@
 import React from "react";
 
 const Instagram = (props) => {
-    const { width = "24", height = "24" } = props;
+    const { width = "22", height = "22" } = props;
 
     return (
         <svg

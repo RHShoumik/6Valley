@@ -2,6 +2,7 @@ import DropdownArrowLightIcon from "@/assets/svgIcons/DropdownArrowLightIcon";
 import MenuIcon from "@/assets/svgIcons/MenuIcon";
 import VerifiedIcon from "@/assets/svgIcons/VerifiedIcon";
 import Dropdown from "@/components/Dropdown";
+import MultiColDropdown from "@/components/MultiColDropdown";
 import { languages } from "@/utils/languages";
 import React from "react";
 
@@ -30,7 +31,7 @@ const BottomNavigation = () => {
                         />
                     </div>
                     <div className="px-6">
-                        <Dropdown
+                        <MultiColDropdown
                             dropdownText="Stores"
                             rightIcon={<DropdownArrowLightIcon className="text-white dark:text-secondary"/>}
                             items={languages}
@@ -38,7 +39,7 @@ const BottomNavigation = () => {
                         />
                     </div>
                     <div className="px-6">
-                        <Dropdown
+                        <MultiColDropdown
                             dropdownText="Brands"
                             rightIcon={<DropdownArrowLightIcon className="text-white dark:text-secondary"/>}
                             items={languages}
