@@ -11,7 +11,7 @@ const TopNavigation = () => {
     return (
         <div>
             {isModalOpen && (
-                <div class="bg-[url('https://i.ibb.co/7gKxb43/top-offer-bg.png')] bg-no-repeat bg-cover bg-center p-4">
+                <div class="bg-[url('https://i.ibb.co/7gKxb43/top-offer-bg.png')] bg-no-repeat bg-cover bg-center p-3">
                     <div className="container grid grid-cols-12 ">
                         <div className="col-span-3">
                             <button onClick={handleClose}>
