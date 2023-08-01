@@ -17,9 +17,6 @@ import DownarrowIcon from "@/assets/svgIcons/DownarrowIcon";
 const SearchNavigation = () => {
     const [setTheme, colorTheme] = useDarkMode();
     const [categories, setCategories] = useState([]);
-    const color = colorTheme === "dark" ? "#fff" : "#000" 
-    console.log(color)
-
     const handleDarkMode = () => {
         setTheme(colorTheme);
     };
