@@ -49,13 +49,13 @@ const HomePage = () => {
                                 <img
                                     src={storgae + banner.photo}
                                     alt={banner.banner_type}
-                                    className="mt-3 rounded-md w-full h-full object-cover md:mt-0"
+                                    className="mt-3 cursor-pointer rounded-md w-full h-full object-cover md:mt-0"
                                 />
                             ))}
                         </div>
                     </div>
                 </div>
-                <div className="col-span-3 h-auto md:pl-3 pt-3">
+                <div className="col-span-3 h-auto md:pl-3 pt-3 cursor-pointer">
                     <img
                         src="https://i.ibb.co/8MQqGcs/static-banner-img.png"
                         alt="static-banner"

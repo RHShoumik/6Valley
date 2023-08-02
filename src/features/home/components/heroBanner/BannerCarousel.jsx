@@ -45,7 +45,7 @@ const BannerCarousel = () => {
                 className="mySwiper bg-darkBg dark:bg-white rounded-md"
             >
                 {heroBanners.map((banner) => (
-                    <SwiperSlide key={banner.id}><img src={storgae+banner.photo} alt={banner.banner_type}/></SwiperSlide>
+                    <SwiperSlide className="cursor-pointer" key={banner.id}><img src={storgae+banner.photo} alt={banner.banner_type}/></SwiperSlide>
                 ))}
             </Swiper>
     );

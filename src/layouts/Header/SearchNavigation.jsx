@@ -40,7 +40,7 @@ const SearchNavigation = () => {
     return (
         <div className="py-3 bg-darkBg dark:bg-white">
             <div className="container md:grid grid-cols-12 justify-between items-center">
-                <div className="flex items-center justify-between col-span-3">
+                <div className="flex items-center justify-between col-span-3 cursor-pointer">
                     <img
                         src="https://i.ibb.co/TL7MLnh/logo.png"
                         className="h-11"
@@ -77,29 +77,29 @@ const SearchNavigation = () => {
                 </div>
                 <div className="hidden md:col-span-4 md:block">
                     <div className="flex justify-end">
-                        <div onClick={handleDarkMode} className=" px-3">
+                        <div onClick={handleDarkMode} className="cursor-pointer px-3">
                             {colorTheme === "dark" ? (
                                 <LightModeIcon className="text-white h-6 w-6 dark:text-secondary" />
                             ) : (
                                 <DarkModeIcon className="text-white h-6 w-6 dark:text-secondary" />
                             )}
                         </div>
-                        <div className="px-3 border-r-2">
+                        <div className="px-3 border-r-2 cursor-pointer">
                             <UserPlaceholderIcon />
                         </div>
-                        <div className="px-3 border-r-2 flex">
+                        <div className="px-3 border-r-2 flex cursor-pointer">
                             <ShuffleIcon className="text-white h-6 w-6 dark:text-secondary" />
                             <div className="flex items-center h-4 w-4 bg-primary p-1 text-white rounded-full text-xs -mt-1 -ml-2 ">
                                 {1}
                             </div>
                         </div>
-                        <div className="px-3 border-r-2 flex">
+                        <div className="px-3 border-r-2 flex cursor-pointer">
                             <WishListIcon className="text-white h-6 w-6 dark:text-secondary" />
                             <div className="flex items-center h-4 w-4 bg-primary p-1 text-white rounded-full text-xs -mt-1 -ml-2 ">
                                 {0}
                             </div>
                         </div>
-                        <div className="px-3 flex">
+                        <div className="px-3 flex cursor-pointer">
                             <CartIcon className="text-white h-6 w-6 dark:text-secondary" />
                             <div className="flex items-center h-4 w-4 bg-primary p-1 text-white rounded-full text-xs -mt-1 -ml-2 ">
                                 {7}
