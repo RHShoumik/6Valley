@@ -5,44 +5,41 @@ import Linkedin from "@/assets/svgIcons/socials/Linkedin";
 import Pinterest from "@/assets/svgIcons/socials/Pinterest";
 import Twitter from "@/assets/svgIcons/socials/Twitter";
 
-
 export const socials = [
     {
-        id:1,
-        name:"Twitter",
+        id: 1,
+        name: "Twitter",
         link: "#",
-        icon: <Twitter />
+        icon: <Twitter />,
     },
     {
-        id:2,
-        name:"Linkedin",
+        id: 2,
+        name: "Linkedin",
         link: "#",
-        icon: <Linkedin />
+        icon: <Linkedin />,
     },
     {
-        id:3,
-        name:"Google",
+        id: 3,
+        name: "Google",
         link: "#",
-        icon: <Google />
+        icon: <Google />,
     },
     {
-        id:4,
-        name:"Pinterest",
+        id: 4,
+        name: "Pinterest",
         link: "#",
-        icon: <Pinterest />
+        icon: <Pinterest />,
     },
     {
-        id:5,
-        name:"Instagram",
+        id: 5,
+        name: "Instagram",
         link: "#",
-        icon: <Instagram />
+        icon: <Instagram />,
     },
     {
-        id:6,
-        name:"Facebook",
+        id: 6,
+        name: "Facebook",
         link: "#",
-        icon: <Facebook />
+        icon: <Facebook />,
     },
-    
-   
-]
+];

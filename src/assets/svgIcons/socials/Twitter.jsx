@@ -1,8 +1,8 @@
 import React from "react";
 
 const Twitter = (props) => {
-    const { width="22", height="22"} = props;
-    
+    const { width = "22", height = "22" } = props;
+
     return (
         <svg
             width={width}

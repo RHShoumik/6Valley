@@ -35,7 +35,7 @@ const Dropdown = (props) => {
         <div ref={dropdownRef} className="block text-left">
             <div
                 onClick={toggleDropdown}
-                className="flex justify-center items-center gap-1 px-1 py-2 text-sm font-medium transition duration-150 ease-in-out"
+                className="flex justify-center items-center cursor-pointer gap-1 px-1 py-2 text-sm font-medium transition duration-150 ease-in-out"
             >
                 {leftIcon ? leftIcon : ""}
                 {dropdownTextColor ? (
@@ -51,7 +51,7 @@ const Dropdown = (props) => {
             </div>
             <div className="relative">
                 {isOpen && (
-                    <div className=" absolute z-10 w-auto rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 md:w-48">
+                    <div className=" absolute z-10 w-auto rounded-md shadow-lg bg-darkBg dark:bg-white ring-1 ring-black ring-opacity-5 md:w-48">
                         <div
                             className="py-1"
                             role="menu"
@@ -61,7 +61,7 @@ const Dropdown = (props) => {
                             {items.map((item) => (
                                 <a
                                     href="#"
-                                    className="block px-3 py-2 text-sm text-gray-700 border-b-[1px] hover:bg-gray-100 hover:text-gray-900 last:border-b-0"
+                                    className="block px-3 py-2 text-sm text-gray-700 border-b-[1px] hover:text-gray-900 last:border-b-0"
                                     role="menuitem"
                                     key={item.id}
                                 >
@@ -75,7 +75,9 @@ const Dropdown = (props) => {
                                         ) : (
                                             ""
                                         )}
-                                        <p className="">{item.name}</p>
+                                        <p className="text-white dark:text-secondary hover:text-primary dark:hover:text-primary">
+                                            {item.name}
+                                        </p>
                                     </div>
                                 </a>
                             ))}

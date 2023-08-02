@@ -15,7 +15,7 @@ const TopNavigation = () => {
                     <div className="flex items-center justify-between pr-6 md:container md:grid md:grid-cols-12 ">
                         <div className="col-span-3">
                             <button onClick={handleClose}>
-                                <CloseIcon className="text-primary h-5 w-5 md:h-6 md:w-6 dark:text-secondary"/>
+                                <CloseIcon className="text-primary h-5 w-5 md:h-6 md:w-6 dark:text-secondary" />
                             </button>
                         </div>
                         <div className="col-span-6 text-primary md:flex justify-center">

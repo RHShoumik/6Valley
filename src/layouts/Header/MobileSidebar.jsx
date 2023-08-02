@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 
+import useDarkMode from "@/hooks/useDarkMode";
+
 import CloseIcon from "@/assets/svgIcons/CloseIcon";
 import DarkModeIcon from "@/assets/svgIcons/DarkModeIcon";
 import LightModeIcon from "@/assets/svgIcons/LightModeIcon";
 import SearchIcon from "@/assets/svgIcons/SearchIcon";
-import useDarkMode from "@/hooks/useDarkMode";
 import VerifiedIcon from "@/assets/svgIcons/VerifiedIcon";
-import DropdownArrowLightIcon from "@/assets/svgIcons/DropdownArrowLightIcon";
 import MobileDropdown from "@/components/MobileDropdown";
-import RightArrow from "@/assets/svgIcons/RightArrow";
 
 const MobileSidebar = ({ icon, categories }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -58,7 +57,10 @@ const MobileSidebar = ({ icon, categories }) => {
                             dropdownText="Categoties"
                             dropdownTextColor="#fff"
                         />
-                        <a src="/" className="text-white dark:text-secondary text-sm">
+                        <a
+                            src="/"
+                            className="text-white dark:text-secondary text-sm"
+                        >
                             Home
                         </a>
                         <MobileDropdown
@@ -85,33 +87,39 @@ const MobileSidebar = ({ icon, categories }) => {
                             </a>
                             <VerifiedIcon />
                         </div>
-                        <a src="/" className="text-white dark:text-secondary text-sm">
-                        Become A Seller
+                        <a
+                            src="/"
+                            className="text-white dark:text-secondary text-sm"
+                        >
+                            Become A Seller
                         </a>
                     </div>
 
                     <div className="flex justify-between items-center pt-5 px-5">
-                        <p>Theme Mode</p>
+                        <p className="text-white dark:text-secondary">
+                            Theme Mode
+                        </p>
                         <div className="flex gap-1 justify-center rounded-3xl items-center shadow-lg p-1">
                             <div
                                 onClick={handleDarkMode}
                                 className="flex justify-center rounded-3xl items-center h-6 w-6"
                             >
                                 <div
-                                    className={
-                                        colorTheme === "dark"
-                                            ? "rounded-3xl dark:bg-indigo-100"
-                                            : ""
-                                    }
+                                    className="flex justify-center rounded-3xl bg-indigo-100 dark:bg-white"
+                                    // className={
+                                    //     colorTheme === "dark"
+                                    //         ? "rounded-3xl dark:bg-indigo-100"
+                                    //         : "bg-white"
+                                    // }
                                 >
-                                    <pghtModeIcon className="text-white h-5 w-5 dark:text-secondary" />
+                                    <DarkModeIcon className="text-secondary h-5 w-5 dark:text-secondary" />
                                 </div>
                             </div>
                             <div
                                 onClick={handleDarkMode}
-                                className="flex justify-center rounded-3xl items-center bg-indigo-100 h-6 w-6"
+                                className="flex justify-center rounded-3xl items-center h-6 w-6 bg-darkBg dark:bg-indigo-100"
                             >
-                                <DarkModeIcon className="text-secondary h-5 w-5 dark:text-white" />
+                                <LightModeIcon className="text-white h-5 w-5 dark:text-secondary" />
                             </div>
                         </div>
                     </div>

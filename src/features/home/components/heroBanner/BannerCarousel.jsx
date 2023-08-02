@@ -31,23 +31,28 @@ const BannerCarousel = () => {
         }
     };
     return (
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper bg-darkBg dark:bg-white rounded-md"
-            >
-                {heroBanners.map((banner) => (
-                    <SwiperSlide key={banner.id}><img src={storgae+banner.photo} alt={banner.banner_type}/></SwiperSlide>
-                ))}
-            </Swiper>
+        <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+            }}
+            pagination={{
+                clickable: true,
+            }}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper bg-darkBg dark:bg-white rounded-md"
+        >
+            {heroBanners.map((banner) => (
+                <SwiperSlide className="cursor-pointer" key={banner.id}>
+                    <img
+                        src={storgae + banner.photo}
+                        alt={banner.banner_type}
+                    />
+                </SwiperSlide>
+            ))}
+        </Swiper>
     );
 };
 
