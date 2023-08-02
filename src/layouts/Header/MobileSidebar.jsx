@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 
+import useDarkMode from "@/hooks/useDarkMode";
+
 import CloseIcon from "@/assets/svgIcons/CloseIcon";
 import DarkModeIcon from "@/assets/svgIcons/DarkModeIcon";
 import LightModeIcon from "@/assets/svgIcons/LightModeIcon";
 import SearchIcon from "@/assets/svgIcons/SearchIcon";
-import useDarkMode from "@/hooks/useDarkMode";
 import VerifiedIcon from "@/assets/svgIcons/VerifiedIcon";
-import DropdownArrowLightIcon from "@/assets/svgIcons/DropdownArrowLightIcon";
 import MobileDropdown from "@/components/MobileDropdown";
-import RightArrow from "@/assets/svgIcons/RightArrow";
 
 const MobileSidebar = ({ icon, categories }) => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);

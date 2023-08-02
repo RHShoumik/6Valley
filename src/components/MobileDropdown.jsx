@@ -1,10 +1,10 @@
-import DownarrowIcon from "@/assets/svgIcons/DownarrowIcon";
-import DropdownArrowLightIcon from "@/assets/svgIcons/DropdownArrowLightIcon";
-import RightArrow from "@/assets/svgIcons/RightArrow";
 import React, { useEffect, useRef, useState } from "react";
 
+import DropdownArrowLightIcon from "@/assets/svgIcons/DropdownArrowLightIcon";
+import RightArrow from "@/assets/svgIcons/RightArrow";
+
 const MobileDropdown = (props) => {
-    const {categories, dropdownText, rightIcon, dropdownIcon } = props;
+    const { categories, dropdownText, rightIcon, dropdownIcon } = props;
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -34,11 +34,11 @@ const MobileDropdown = (props) => {
                 className="flex justify-between items-center gap-1 text-sm font-medium md:px-4"
             >
                 <a className="text-white dark:text-secondary">{dropdownText}</a>
-                {isOpen ? 
-                <DropdownArrowLightIcon className="text-white h-4 w-4 dark:text-secondary" />
-                : 
-                <RightArrow className="text-white h-4 w-4 dark:text-secondary" />
-                }
+                {isOpen ? (
+                    <DropdownArrowLightIcon className="text-white h-4 w-4 dark:text-secondary" />
+                ) : (
+                    <RightArrow className="text-white h-4 w-4 dark:text-secondary" />
+                )}
             </div>
             <div className="relative">
                 {isOpen && (
@@ -66,7 +66,9 @@ const MobileDropdown = (props) => {
                                         ) : (
                                             ""
                                         )}
-                                        <p className="text-white dark:text-darkBg">{item.name}</p>
+                                        <p className="text-white dark:text-darkBg">
+                                            {item.name}
+                                        </p>
                                     </div>
                                 </a>
                             ))}

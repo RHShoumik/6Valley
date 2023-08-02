@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import LeftSidebar from "@/components/LeftSidebar";
 import axios from "axios";
+
+import LeftSidebar from "@/components/LeftSidebar";
 import BannerCarousel from "./components/heroBanner/BannerCarousel";
 
 const storgae = "https://6valley-aster.6amtech.com/storage/app/public/banner/";
@@ -43,7 +44,7 @@ const HomePage = () => {
                 </div>
                 <div className="col-span-6 md:mt-3">
                     <div className="md:flex flex-col gap-3">
-                            <BannerCarousel />
+                        <BannerCarousel />
                         <div className="md:flex gap-3 md:mt-1">
                             {footerBanners.slice(0, 2).map((banner) => (
                                 <img

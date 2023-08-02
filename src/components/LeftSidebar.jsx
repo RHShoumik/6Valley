@@ -7,15 +7,18 @@ const LeftSidebar = (props) => {
     const { items } = props;
     return (
         <div className="shadow-sm rounded-b-sm px-3 mx-2">
-            {items.slice(0,8).map((item) => (
-                <div className="flex justify-between border-b last:border-b-0 py-3" key={item.id}>
+            {items.slice(0, 8).map((item) => (
+                <div
+                    className="flex justify-between border-b last:border-b-0 py-3"
+                    key={item.id}
+                >
                     <div className="text-white dark:text-darkBg">
                         {item.name}
                     </div>
                     <div>
                         {item.childes.length !== 0 ? (
                             <DropdownRight
-                            items={item.childes}
+                                items={item.childes}
                                 rightIcon={
                                     <RightArrow className="text-white dark:text-secondary" />
                                 }

@@ -47,7 +47,12 @@ const SearchNavigation = () => {
                         alt="Site-Logo"
                     />
                     <div className="block md:hidden">
-                        <MobileSidebar categories={categories} icon={<MenuIcon className="text-white h-6 w-6 dark:text-secondary"/>} />
+                        <MobileSidebar
+                            categories={categories}
+                            icon={
+                                <MenuIcon className="text-white h-6 w-6 dark:text-secondary" />
+                            }
+                        />
                     </div>
                 </div>
 
@@ -77,7 +82,10 @@ const SearchNavigation = () => {
                 </div>
                 <div className="hidden md:col-span-4 md:block">
                     <div className="flex justify-end">
-                        <div onClick={handleDarkMode} className="cursor-pointer px-3">
+                        <div
+                            onClick={handleDarkMode}
+                            className="cursor-pointer px-3"
+                        >
                             {colorTheme === "dark" ? (
                                 <LightModeIcon className="text-white h-6 w-6 dark:text-secondary" />
                             ) : (

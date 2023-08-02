@@ -75,7 +75,9 @@ const Dropdown = (props) => {
                                         ) : (
                                             ""
                                         )}
-                                        <p className="text-white dark:text-secondary hover:text-primary dark:hover:text-primary">{item.name}</p>
+                                        <p className="text-white dark:text-secondary hover:text-primary dark:hover:text-primary">
+                                            {item.name}
+                                        </p>
                                     </div>
                                 </a>
                             ))}

@@ -15,11 +15,11 @@ module.exports = {
       colors: {
         primary: "#337EEA",
         secondary: "#0F1D34",
-        darkBg:"#282828",
-        darkBgBody:"#18181A",
+        darkBg: "#282828",
+        darkBgBody: "#18181A",
         fontColor: "#222222",
         heading: "#1455AC",
-        white:"#fff",
+        white: "#fff",
         lightGray: "#F8F8FA",
         primaryLight: "fafafa"
       },
@@ -30,7 +30,7 @@ module.exports = {
         center: true,
         padding: "1rem",
       },
-    }, 
+    },
     screens: {
       "sm": "420px",
       "md": "768px",

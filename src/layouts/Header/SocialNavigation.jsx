@@ -1,10 +1,11 @@
 import React from "react";
 
-import { socials } from "@/common/const";
-import Dropdown from "@/components/Dropdown";
-import { languages } from "@/utils/languages";
-import DropdownArrowLightIcon from "@/assets/svgIcons/DropdownArrowLightIcon";
 import { currency } from "@/utils/currency";
+import { socials } from "@/common/const";
+import { languages } from "@/utils/languages";
+
+import Dropdown from "@/components/Dropdown";
+import DropdownArrowLightIcon from "@/assets/svgIcons/DropdownArrowLightIcon";
 
 const SocialNavigation = () => {
     return (

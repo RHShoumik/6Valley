@@ -1,5 +1,6 @@
-import RightArrow from "@/assets/svgIcons/RightArrow";
 import React, { useEffect, useRef, useState } from "react";
+
+import RightArrow from "@/assets/svgIcons/RightArrow";
 
 const DropdownRight = (props) => {
     const { dropdownText, rightIcon, items } = props;

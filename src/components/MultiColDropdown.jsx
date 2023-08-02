@@ -38,7 +38,9 @@ const MultiColDropdown = (props) => {
                 className="flex justify-center items-center gap-1 cursor-pointer px-4 py-2 text-sm font-medium"
             >
                 {dropdownTextColor ? (
-                    <p className="text-xs text-white md:text-base">{dropdownText}</p>
+                    <p className="text-xs text-white md:text-base">
+                        {dropdownText}
+                    </p>
                 ) : (
                     <p className="text-xs text-white dark:text-secondary md:text-base">
                         {dropdownText}
@@ -55,27 +57,33 @@ const MultiColDropdown = (props) => {
                             aria-orientation="vertical"
                             aria-labelledby="options-menu"
                         >
-                            { items.map((item, index) => (
-                                      <a
-                                          href="#"
-                                          className={`block px-4 py-2 text-sm text-gray-700 border-b-[1px] hover:text-primary last:border-b-0 child ${index >= items.length - 2 ? 'border-b-0' : ''}`}
-                                          role="menuitem"
-                                          key={item.id}
-                                      >
-                                          <div className="flex">
-                                              {item.icon ? (
-                                                  <img
-                                                      src={item.icon}
-                                                      className="w-7 mr-4"
-                                                      alt="Icon"
-                                                  />
-                                              ) : (
-                                                  ""
-                                              )}
-                                              <p className="text-white dark:text-secondary hover:text-primary dark:hover:text-primary">{item.name}</p>
-                                          </div>
-                                      </a>
-                                  ))}
+                            {items.map((item, index) => (
+                                <a
+                                    href="#"
+                                    className={`block px-4 py-2 text-sm text-gray-700 border-b-[1px] hover:text-primary last:border-b-0 child ${
+                                        index >= items.length - 2
+                                            ? "border-b-0"
+                                            : ""
+                                    }`}
+                                    role="menuitem"
+                                    key={item.id}
+                                >
+                                    <div className="flex">
+                                        {item.icon ? (
+                                            <img
+                                                src={item.icon}
+                                                className="w-7 mr-4"
+                                                alt="Icon"
+                                            />
+                                        ) : (
+                                            ""
+                                        )}
+                                        <p className="text-white dark:text-secondary hover:text-primary dark:hover:text-primary">
+                                            {item.name}
+                                        </p>
+                                    </div>
+                                </a>
+                            ))}
                         </div>
                     </div>
                 )}
@@ -84,4 +92,4 @@ const MultiColDropdown = (props) => {
     );
 };
 
-export default MultiColDropdown
+export default MultiColDropdown;
