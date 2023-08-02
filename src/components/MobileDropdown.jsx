@@ -42,7 +42,7 @@ const MobileDropdown = (props) => {
             </div>
             <div className="relative">
                 {isOpen && (
-                    <div className="origin-top-right z-10 w-auto bg-white">
+                    <div className="origin-top-right z-10 w-auto bg-darkBg dark:bg-white">
                         <div
                             className="py-1"
                             role="menu"
@@ -66,7 +66,7 @@ const MobileDropdown = (props) => {
                                         ) : (
                                             ""
                                         )}
-                                        <p className="">{item.name}</p>
+                                        <p className="text-white dark:text-darkBg">{item.name}</p>
                                     </div>
                                 </a>
                             ))}
